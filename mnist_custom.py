@@ -185,12 +185,11 @@ print("Y_train shape:", Y_train.shape)  # Should be (1, m_train)
 # Example usage
 # Define network architecture
 layer_dims = [784, 128, 64, 10]  # Input layer, 2 hidden layers, output layer
-activation_functions = ['relu', 'relu', 'softmax']  # One activation function per layer (except input)
+activation_functions = ['relu', 'relu', 'softmax']
 
 # Create and train network
 nn = NeuralNetwork(layer_dims, activation_functions)
 
-# Assuming X_train and Y_train are your training data
 costs, accuracies = nn.train(X_train, Y_train, 
                             learning_rate=0.01, 
                             num_iterations=200)
